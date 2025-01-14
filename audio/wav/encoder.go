@@ -10,7 +10,7 @@ import (
 	"io"
 	"os"
 
-	"azul3d.org/engine/audio"
+	"github.com/qmcloud/engine/audio"
 )
 
 // An encoder is capable of encoding audio samples to a WAV file.

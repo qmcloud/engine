@@ -1,13 +1,14 @@
 // Copyright 2014 The Azul3D Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
+//go:build js
 // +build js
 
 package glc
 
 import (
-	"azul3d.org/engine/gfx"
 	"github.com/gopherjs/webgl"
+	"github.com/qmcloud/engine/gfx"
 )
 
 type glFuncs struct {
@@ -87,7 +88,7 @@ func NewContext(ctx *webgl.Context) *Context {
 		Context: ctx,
 
 		// TODO(slimsag): add to webgl bindings.
-		ALWAYS: 519,
+		ALWAYS:                             519,
 		FRAMEBUFFER_INCOMPLETE_MULTISAMPLE: 0x8D56,
 
 		// TODO(slimsag): Find out if this is valid WebGL ? See gles2context.go

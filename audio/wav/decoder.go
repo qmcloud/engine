@@ -11,7 +11,7 @@ import (
 	"math"
 	"sync"
 
-	"azul3d.org/engine/audio"
+	"github.com/qmcloud/engine/audio"
 )
 
 const (
@@ -85,7 +85,7 @@ func (d *decoder) smallRead(n int) ([]byte, error) {
 // Reads and returns the next RIFF chunk, note that always len(ident) == 4
 // E.g.
 //
-//  "fmt " (notice space).
+//	"fmt " (notice space).
 //
 // Length is length of chunk data.
 //

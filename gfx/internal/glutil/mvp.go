@@ -5,8 +5,8 @@
 package glutil
 
 import (
-	"azul3d.org/engine/gfx"
-	"azul3d.org/engine/lmath"
+	"github.com/qmcloud/engine/gfx"
+	"github.com/qmcloud/engine/lmath"
 )
 
 // MVPCache caches a gfx.Object's Model, View, Projection and MVP matrices.

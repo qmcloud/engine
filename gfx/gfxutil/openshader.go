@@ -8,18 +8,18 @@ import (
 	"io/ioutil"
 	"path/filepath"
 
-	"azul3d.org/engine/gfx"
+	"github.com/qmcloud/engine/gfx"
 )
 
 // OpenShader opens the GLSL shader files specified by the given base path. For
 // example:
 //
-//  s := OpenShader("glsl/basic")
+//	s := OpenShader("glsl/basic")
 //
 // Would return a shader composed of the two GLSL shader sources:
 //
-//  glsl/basic.vert
-//  glsl/basic.frag
+//	glsl/basic.vert
+//	glsl/basic.frag
 //
 // The filename (e.g. "basic") will be the name of the shader (which is used
 // for debug output only).

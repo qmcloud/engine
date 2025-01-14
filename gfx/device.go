@@ -7,7 +7,7 @@ package gfx
 import (
 	"image"
 
-	"azul3d.org/engine/gfx/clock"
+	"github.com/qmcloud/engine/gfx/clock"
 )
 
 // Camera represents a single camera object. See the camera subpackage for a

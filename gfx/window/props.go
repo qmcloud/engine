@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"sync"
 
-	"azul3d.org/engine/gfx"
+	"github.com/qmcloud/engine/gfx"
 )
 
 // Props represents window properties. Properties are safe for use concurrently
@@ -26,8 +26,7 @@ type Props struct {
 
 // String returns a string like:
 //
-//  "Window(Title="Hello World!", Fullscreen=false)"
-//
+//	"Window(Title="Hello World!", Fullscreen=false)"
 func (p *Props) String() string {
 	p.l.RLock()
 	str := fmt.Sprintf("Window(Title=%q, Fullscreen=%q)", p.title, p.fullscreen)
@@ -40,8 +39,7 @@ func (p *Props) String() string {
 //
 // For example, a title "Hello World - {FPS}" would end up as:
 //
-//  "Hello world - 60FPS"
-//
+//	"Hello world - 60FPS"
 func (p *Props) SetTitle(title string) {
 	p.l.Lock()
 	p.title = title
@@ -336,8 +334,7 @@ func (p *Props) ResizeRenderSync() bool {
 // To check what framebuffer precision you actually receive, look at the
 // precision of the device's default canvas:
 //
-//  device.Precision()
-//
+//	device.Precision()
 func (p *Props) SetPrecision(precision gfx.Precision) {
 	p.l.Lock()
 	p.precision = precision
@@ -354,8 +351,7 @@ func (p *Props) SetPrecision(precision gfx.Precision) {
 // To check what framebuffer precision you actually receive, look at the
 // precision of the device's default canvas:
 //
-//  device.Precision()
-//
+//	device.Precision()
 func (p *Props) Precision() gfx.Precision {
 	p.l.RLock()
 	precision := p.precision
@@ -366,29 +362,28 @@ func (p *Props) Precision() gfx.Precision {
 // NewProps returns a new initialized set of window properties. The default
 // values for each property are as follows:
 //
-//  Title: "Azul3D - {FPS}"
-//  Size: 800x450
-//  Pos: -1, -1 (centered on screen)
-//  CursorPos: -1.0, -1.0 (current position)
-//  ShouldClose: true
-//  Visible: true
-//  Minimized: false
-//  Fullscreen: false
-//  Focused: true
-//  VSync: true
-//  Resizable: true
-//  Decorated: true
-//  AlwaysOnTop: false
-//  CursorGrabbed: false
-//  ResizeRenderSync: true
-//  FramebufferSize: 1x1 (set via window owner)
-//  Precision: gfx.Precision{
-//      RedBits: 8, GreenBits: 8, BlueBits: 8, AlphaBits: 0,
-//      DepthBits: 24,
-//      StencilBits: 0,
-//      Samples: 2,
-//  }
-//
+//	Title: "Azul3D - {FPS}"
+//	Size: 800x450
+//	Pos: -1, -1 (centered on screen)
+//	CursorPos: -1.0, -1.0 (current position)
+//	ShouldClose: true
+//	Visible: true
+//	Minimized: false
+//	Fullscreen: false
+//	Focused: true
+//	VSync: true
+//	Resizable: true
+//	Decorated: true
+//	AlwaysOnTop: false
+//	CursorGrabbed: false
+//	ResizeRenderSync: true
+//	FramebufferSize: 1x1 (set via window owner)
+//	Precision: gfx.Precision{
+//	    RedBits: 8, GreenBits: 8, BlueBits: 8, AlphaBits: 0,
+//	    DepthBits: 24,
+//	    StencilBits: 0,
+//	    Samples: 2,
+//	}
 func NewProps() *Props {
 	return &Props{
 		title:            "Azul3D - {FPS}",

@@ -7,8 +7,8 @@ package util
 import (
 	"image"
 
-	"azul3d.org/engine/gfx"
-	"azul3d.org/engine/gfx/clock"
+	"github.com/qmcloud/engine/gfx"
+	"github.com/qmcloud/engine/gfx/clock"
 )
 
 // Swapper is a swappable gfx.Device implementation.

@@ -1,13 +1,14 @@
 // Copyright 2014 The Azul3D Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
+//go:build (386 && !gles2) || (amd64 && !gles2)
 // +build 386,!gles2 amd64,!gles2
 
 package glc
 
 import (
-	"azul3d.org/engine/gfx"
-	"azul3d.org/engine/gfx/internal/gl/2.0/gl"
+	"github.com/qmcloud/engine/gfx"
+	"github.com/qmcloud/engine/gfx/internal/gl/2.0/gl"
 )
 
 type glFuncs struct {
@@ -258,12 +259,12 @@ func NewContext() *Context {
 		FUNC_SUBTRACT:         gl.FUNC_SUBTRACT,
 		FUNC_REVERSE_SUBTRACT: gl.FUNC_REVERSE_SUBTRACT,
 
-		DITHER:       gl.DITHER,
-		SCISSOR_TEST: gl.SCISSOR_TEST,
-		STENCIL_TEST: gl.STENCIL_TEST,
-		DEPTH_TEST:   gl.DEPTH_TEST,
-		CULL_FACE:    gl.CULL_FACE,
-		BLEND:        gl.BLEND,
+		DITHER:                   gl.DITHER,
+		SCISSOR_TEST:             gl.SCISSOR_TEST,
+		STENCIL_TEST:             gl.STENCIL_TEST,
+		DEPTH_TEST:               gl.DEPTH_TEST,
+		CULL_FACE:                gl.CULL_FACE,
+		BLEND:                    gl.BLEND,
 		SAMPLE_ALPHA_TO_COVERAGE: gl.SAMPLE_ALPHA_TO_COVERAGE,
 		MULTISAMPLE:              gl.MULTISAMPLE,
 

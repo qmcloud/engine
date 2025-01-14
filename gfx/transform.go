@@ -7,7 +7,7 @@ package gfx
 import (
 	"sync"
 
-	"azul3d.org/engine/lmath"
+	"github.com/qmcloud/engine/lmath"
 )
 
 // Transformable represents a generic interface to any object that can return
@@ -193,8 +193,7 @@ func (t *Transform) Transform() *Transform {
 
 // Mat4 is short-hand for:
 //
-//  return t.Convert(LocalToWorld)
-//
+//	return t.Convert(LocalToWorld)
 func (t *Transform) Mat4() lmath.Mat4 {
 	return t.Convert(LocalToWorld)
 }
@@ -457,8 +456,7 @@ func (t *Transform) Convert(c CoordConv) lmath.Mat4 {
 // ConvertPos converts the given point, p, using the given coordinate space
 // conversion. For instance to convert a point in local space into world space:
 //
-//  t.ConvertPos(p, LocalToWorld)
-//
+//	t.ConvertPos(p, LocalToWorld)
 func (t *Transform) ConvertPos(p lmath.Vec3, c CoordConv) lmath.Vec3 {
 	return p.TransformMat4(t.Convert(c))
 }
@@ -467,8 +465,7 @@ func (t *Transform) ConvertPos(p lmath.Vec3, c CoordConv) lmath.Vec3 {
 // conversion. For instance to convert a rotation in local space into world
 // space:
 //
-//  t.ConvertRot(p, LocalToWorld)
-//
+//	t.ConvertRot(p, LocalToWorld)
 func (t *Transform) ConvertRot(r lmath.Vec3, c CoordConv) lmath.Vec3 {
 	m := t.Convert(c)
 	q := lmath.QuatFromHpr(r.XyzToHpr().Radians(), lmath.CoordSysZUpRight)
@@ -486,9 +483,8 @@ func (t *Transform) Destroy() {
 
 // New returns a new transform whose child is this one. It is short-handed for:
 //
-//  ret := NewTransform()
-//  ret.SetParent(t)
-//
+//	ret := NewTransform()
+//	ret.SetParent(t)
 func (t *Transform) New() *Transform {
 	ret := NewTransform()
 	ret.SetParent(t)

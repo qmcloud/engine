@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"sync"
 
-	"azul3d.org/engine/lmath"
+	"github.com/qmcloud/engine/lmath"
 )
 
 // Boundable represents any object that can return it's axis-aligned bounding
@@ -407,10 +407,10 @@ func fastAppendSlice(a, b interface{}) interface{} {
 // This function can properly maintain the existing index type of a mesh, so
 // that in any of the following cases:
 //
-//  mesh.Append(mesh)
-//  indexedMesh.Append(indexedMesh)
-//  indexedMesh.Append(mesh)
-//  mesh.Append(indexedMesh)
+//	mesh.Append(mesh)
+//	indexedMesh.Append(indexedMesh)
+//	indexedMesh.Append(mesh)
+//	mesh.Append(indexedMesh)
 //
 // The original mesh's indexing is kept: anything appended to an indexed mesh
 // always ends up as an indexed mesh, and vice versa.

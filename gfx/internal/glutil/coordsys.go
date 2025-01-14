@@ -4,7 +4,7 @@
 
 package glutil
 
-import "azul3d.org/engine/lmath"
+import "github.com/qmcloud/engine/lmath"
 
 var (
 	// CoordSys is a coordinate system matrix converting from a right-handed Z

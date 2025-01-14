@@ -7,7 +7,7 @@ package glutil
 import (
 	"image"
 
-	"azul3d.org/engine/gfx"
+	"github.com/qmcloud/engine/gfx"
 )
 
 // Ensure these values match the default OpenGL state values listed in the
@@ -25,12 +25,12 @@ var DefaultStencilState = gfx.StencilState{
 
 var DefaultBlendState = gfx.BlendState{
 	gfx.Color{R: 0, G: 0, B: 0, A: 0}, // Color
-	gfx.BOne,  // SrcRGB
-	gfx.BZero, // DstRGB
-	gfx.BOne,  // SrcAlpha
-	gfx.BZero, // DstAlpha
-	gfx.BAdd,  // RGBEq
-	gfx.BAdd,  // AlphaEq
+	gfx.BOne,                          // SrcRGB
+	gfx.BZero,                         // DstRGB
+	gfx.BOne,                          // SrcAlpha
+	gfx.BZero,                         // DstAlpha
+	gfx.BAdd,                          // RGBEq
+	gfx.BAdd,                          // AlphaEq
 }
 
 var DefaultState = &gfx.State{
@@ -67,7 +67,7 @@ type CommonState struct {
 
 var DefaultCommonState = &CommonState{
 	DefaultState,
-	image.Rect(0, 0, 0, 0),                    // Scissor - Whole screen
+	image.Rect(0, 0, 0, 0), // Scissor - Whole screen
 	gfx.Color{R: 0.0, G: 0.0, B: 0.0, A: 0.0}, // ClearColor
 	1.0,   // ClearDepth
 	0,     // ClearStencil

@@ -7,8 +7,8 @@ package gfxutil
 import (
 	"sort"
 
-	"azul3d.org/engine/gfx"
-	"azul3d.org/engine/lmath"
+	"github.com/qmcloud/engine/gfx"
+	"github.com/qmcloud/engine/lmath"
 )
 
 // ByDist sorts a list of graphics objects based on their distance away from

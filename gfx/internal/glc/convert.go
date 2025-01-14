@@ -4,7 +4,7 @@
 
 package glc
 
-import "azul3d.org/engine/gfx"
+import "github.com/qmcloud/engine/gfx"
 
 func (c *Context) ConvertTexWrap(w gfx.TexWrap) int {
 	switch w {

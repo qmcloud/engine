@@ -15,14 +15,14 @@
 //
 // The type of camera can be switched at runtime by changing mycam.Ortho = true
 // as needed, and then calling Update.
-package camera // import "azul3d.org/engine/gfx/camera"
+package camera // import "github.com/qmcloud/engine/gfx/camera"
 
 import (
 	"image"
 	"sync"
 
-	"azul3d.org/engine/gfx"
-	"azul3d.org/engine/lmath"
+	"github.com/qmcloud/engine/gfx"
+	"github.com/qmcloud/engine/lmath"
 )
 
 var (
@@ -144,11 +144,10 @@ var camPool = sync.Pool{
 // New returns a new perspective (3D) camera updated with the given viewing
 // rectangle. The returned camera has the following properties:
 //
-//   FOV = 75
-//   Near = 0.1
-//   Far = 1000
-//   Ortho = false
-//
+//	FOV = 75
+//	Near = 0.1
+//	Far = 1000
+//	Ortho = false
 func New(view image.Rectangle) *Camera {
 	c := camPool.Get().(*Camera)
 	c.Near = 0.1
@@ -162,11 +161,10 @@ func New(view image.Rectangle) *Camera {
 // NewOrtho returns a new orthographic (2D) camera updated with the given
 // viewing rectangle. The returned camera has the following properties:
 //
-//   Near = 0.1
-//   Far = 1000
-//   FOV = 75
-//   Ortho = true
-//
+//	Near = 0.1
+//	Far = 1000
+//	FOV = 75
+//	Ortho = true
 func NewOrtho(view image.Rectangle) *Camera {
 	c := camPool.Get().(*Camera)
 	c.Near = 0.1

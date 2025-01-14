@@ -7,7 +7,7 @@ package camera
 import (
 	"image"
 
-	"azul3d.org/engine/gfx"
+	"github.com/qmcloud/engine/gfx"
 )
 
 // A check for whether or not *camera.Camera implements gfx.Camera properly.

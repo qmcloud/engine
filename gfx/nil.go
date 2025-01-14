@@ -8,7 +8,7 @@ import (
 	"image"
 	"sync"
 
-	"azul3d.org/engine/gfx/clock"
+	"github.com/qmcloud/engine/gfx/clock"
 )
 
 type nilNativeObject struct{}

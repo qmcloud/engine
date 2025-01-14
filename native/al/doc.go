@@ -25,10 +25,9 @@
 // shown below, into their home directory under the ".azul3d" directory created
 // on their operating system's file system:
 //
-//  linux/amd64: libopenal_soft.so.1.15.1
+//	linux/amd64: libopenal_soft.so.1.15.1
 //
 // And it will be dynamically linked and loaded instead of ours. Should the
 // user wish to restore our dynamic link library, they can simply delete theirs
 // and it will be automatically placed there once again.
-//
-package al // import "azul3d.org/engine/native/al"
+package al // import "github.com/qmcloud/engine/native/al"

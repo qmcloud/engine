@@ -6,7 +6,7 @@
 package gfx
 
 import (
-	"azul3d.org/engine/lmath"
+	"github.com/qmcloud/engine/lmath"
 )
 
 // TexCoord represents a 2D texture coordinate with U and V components.

@@ -10,7 +10,7 @@ import (
 	"os"
 	"testing"
 
-	"azul3d.org/engine/audio"
+	"github.com/qmcloud/engine/audio"
 )
 
 type decodeTest struct {

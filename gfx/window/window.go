@@ -9,20 +9,19 @@ import (
 	"log"
 	"sync"
 
-	"azul3d.org/engine/gfx"
-	"azul3d.org/engine/keyboard"
-	"azul3d.org/engine/mouse"
+	"github.com/qmcloud/engine/gfx"
+	"github.com/qmcloud/engine/keyboard"
+	"github.com/qmcloud/engine/mouse"
 )
 
 // Clipboard is the interface describing a system's clipboard. Grab a clipboard
 // from a window (some platforms don't support clipboard access):
 //
-//  clip, ok := win.(window.Clipboard)
-//  if ok {
-//      // We have clipboard access.
-//      clip.SetClipboard("Hello World!")
-//  }
-//
+//	clip, ok := win.(window.Clipboard)
+//	if ok {
+//	    // We have clipboard access.
+//	    clip.SetClipboard("Hello World!")
+//	}
 type Clipboard interface {
 	// SetClipboard sets the clipboard string.
 	SetClipboard(clipboard string)
@@ -118,13 +117,13 @@ var numWindows struct {
 //
 // Query how many windows are currently open:
 //
-//  open := window.Num(0)
-//  fmt.Println(open) // e.g. "1"
+//	open := window.Num(0)
+//	fmt.Println(open) // e.g. "1"
 //
 // Add two windows to the current count (1) and fetch the new value:
 //
-//  open := window.Num(2)
-//  fmt.Println(open) // e.g. "3"
+//	open := window.Num(2)
+//	fmt.Println(open) // e.g. "3"
 //
 // Implementors of the Window interface are the only ones that should modify
 // the window count.
@@ -166,25 +165,24 @@ var ErrSingleWindow = errors.New("only a single window is allowed")
 //
 // The following code works fine, because New is run in a seperate goroutine:
 //
-//  func main() {
-//      go func() {
-//          // New runs in a seperate goroutine, after MainLoop has started.
-//          w, d, err := window.New(nil)
-//          ... use w, d, handle err ...
-//      }()
-//      window.MainLoop()
-//  }
+//	func main() {
+//	    go func() {
+//	        // New runs in a seperate goroutine, after MainLoop has started.
+//	        w, d, err := window.New(nil)
+//	        ... use w, d, handle err ...
+//	    }()
+//	    window.MainLoop()
+//	}
 //
 // The following code does not work, a deadlock occurs because MainLoop is
 // called after New, and New cannot complete unless MainLoop is running.
 //
-//  func main() {
-//      // Won't ever complete: the main loop isn't running yet!
-//      w, d, err := window.New(nil)
-//      ... use w, d, handle err ...
-//      window.MainLoop()
-//  }
-//
+//	func main() {
+//	    // Won't ever complete: the main loop isn't running yet!
+//	    w, d, err := window.New(nil)
+//	    ... use w, d, handle err ...
+//	    window.MainLoop()
+//	}
 func New(p *Props) (w Window, d gfx.Device, err error) {
 	if p == nil {
 		p = DefaultProps
@@ -215,9 +213,9 @@ func New(p *Props) (w Window, d gfx.Device, err error) {
 // This function must be called only from the program's main function (other
 // work should be done in other goroutines):
 //
-//  func main() {
-//      window.Run(gfxLoop, nil)
-//  }
+//	func main() {
+//	    window.Run(gfxLoop, nil)
+//	}
 //
 // For more documentation about the behavior of Run, see the New function.
 func Run(gfxLoop func(w Window, d gfx.Device), p *Props) {

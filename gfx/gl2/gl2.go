@@ -9,7 +9,7 @@ import (
 	"image"
 	"io"
 
-	"azul3d.org/engine/gfx"
+	"github.com/qmcloud/engine/gfx"
 )
 
 // ErrInvalidVersion is returned by New when attempting to create a OpenGL 2

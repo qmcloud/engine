@@ -8,7 +8,7 @@ import (
 	"errors"
 	"image"
 
-	"azul3d.org/engine/gfx"
+	"github.com/qmcloud/engine/gfx"
 )
 
 var (
@@ -27,17 +27,17 @@ var (
 //
 // It will return draw=false, err == nil in the following cases:
 //
-//  rect.Empty() == true
-//  o.Shader != nil && len(o.Shader.Error) > 0
+//	rect.Empty() == true
+//	o.Shader != nil && len(o.Shader.Error) > 0
 //
 // It may return the following errors:
 //
-//  ErrNilState
-//  ErrNilShader
-//  ErrNilSource
-//  ErrNoVertices
-//  ErrNoMeshes
-//  ErrShaderError
+//	ErrNilState
+//	ErrNilShader
+//	ErrNilSource
+//	ErrNoVertices
+//	ErrNoMeshes
+//	ErrShaderError
 //
 // If draw == true && err == nil, then it will:
 //

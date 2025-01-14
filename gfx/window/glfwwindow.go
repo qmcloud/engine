@@ -1,6 +1,7 @@
 // Copyright 2014 The Azul3D Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
+//go:build 386 || amd64
 // +build 386 amd64
 
 package window
@@ -16,12 +17,12 @@ import (
 	"sync"
 	"time"
 
-	"azul3d.org/engine/gfx"
-	"azul3d.org/engine/gfx/internal/tag"
-	"azul3d.org/engine/gfx/internal/util"
-	"azul3d.org/engine/keyboard"
-	"azul3d.org/engine/mouse"
 	"github.com/go-gl/glfw/v3.1/glfw"
+	"github.com/qmcloud/engine/gfx"
+	"github.com/qmcloud/engine/gfx/internal/tag"
+	"github.com/qmcloud/engine/gfx/internal/util"
+	"github.com/qmcloud/engine/keyboard"
+	"github.com/qmcloud/engine/mouse"
 )
 
 // intBool returns 0 or 1 depending on b.

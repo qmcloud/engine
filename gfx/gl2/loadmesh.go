@@ -9,8 +9,8 @@ import (
 	"runtime"
 	"unsafe"
 
-	"azul3d.org/engine/gfx"
-	"azul3d.org/engine/gfx/internal/gl/2.0/gl"
+	"github.com/qmcloud/engine/gfx"
+	"github.com/qmcloud/engine/gfx/internal/gl/2.0/gl"
 )
 
 // TODO(slimsag): move to internal/glc ?
@@ -106,13 +106,15 @@ func (r *device) deleteVBO(vboID *uint32) {
 
 // attribSize returns the number of rows, and the size of each row measured in
 // 32-bit elements:
-//  rows == 1 == float32, gfx.TexCoord, gfx.Vec3, gfx.Vec4, gfx.Color
-//  rows == 4 == gfx.Mat4
 //
-//  size == 1 == float32
-//  size == 2 == gfx.TexCoord
-//  size == 3 == gfx.Vec3
-//  size == 4 == gfx.Vec4, gfx.Color, gfx.Mat4
+//	rows == 1 == float32, gfx.TexCoord, gfx.Vec3, gfx.Vec4, gfx.Color
+//	rows == 4 == gfx.Mat4
+//
+//	size == 1 == float32
+//	size == 2 == gfx.TexCoord
+//	size == 3 == gfx.Vec3
+//	size == 4 == gfx.Vec4, gfx.Color, gfx.Mat4
+//
 // ok == false is returned if x is not one of the above types.
 //
 // TODO(slimsag): move to internal/glc ?

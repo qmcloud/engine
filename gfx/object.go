@@ -7,7 +7,7 @@ package gfx
 import (
 	"sync"
 
-	"azul3d.org/engine/lmath"
+	"github.com/qmcloud/engine/lmath"
 )
 
 // Destroyable defines a destroyable object. Once an object is destroyed it may
@@ -101,7 +101,7 @@ type Object struct {
 // meshes from this object you need to explicitly clear the cached bounds so
 // that the next call to Bounds() will calculate the bounding box again:
 //
-//  o.CachedBounds = nil
+//	o.CachedBounds = nil
 //
 // You do not need to clear the cached bounds if the transform of the object
 // has changed (as it is applied after calculation of the bounding box).
@@ -223,8 +223,7 @@ var objPool = sync.Pool{
 
 // NewObject creates and returns a new object with:
 //
-//  o.Transform == NewTransform()
-//
+//	o.Transform == NewTransform()
 func NewObject() *Object {
 	return objPool.Get().(*Object)
 }

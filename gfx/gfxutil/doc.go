@@ -3,4 +3,4 @@
 // license that can be found in the LICENSE file.
 
 // Package gfxutil implements basic gfx utilities.
-package gfxutil // import "azul3d.org/engine/gfx/gfxutil"
+package gfxutil // import "github.com/qmcloud/engine/gfx/gfxutil"

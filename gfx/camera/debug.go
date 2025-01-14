@@ -7,7 +7,7 @@ package camera
 import (
 	"math"
 
-	"azul3d.org/engine/gfx"
+	"github.com/qmcloud/engine/gfx"
 )
 
 var vertShader = []byte(`

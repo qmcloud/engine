@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"azul3d.org/engine/lmath"
+	"github.com/qmcloud/engine/lmath"
 )
 
 func TestHighResolutionTime(t *testing.T) {

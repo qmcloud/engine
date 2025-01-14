@@ -11,11 +11,11 @@ import (
 	"runtime"
 	"unsafe"
 
-	"azul3d.org/engine/gfx"
-	"azul3d.org/engine/gfx/internal/gl/2.0/gl"
-	"azul3d.org/engine/gfx/internal/glutil"
-	"azul3d.org/engine/gfx/internal/tag"
-	"azul3d.org/engine/gfx/internal/util"
+	"github.com/qmcloud/engine/gfx"
+	"github.com/qmcloud/engine/gfx/internal/gl/2.0/gl"
+	"github.com/qmcloud/engine/gfx/internal/glutil"
+	"github.com/qmcloud/engine/gfx/internal/tag"
+	"github.com/qmcloud/engine/gfx/internal/util"
 )
 
 type nativeTexture struct {

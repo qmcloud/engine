@@ -8,7 +8,7 @@ import (
 	"image"
 	"io"
 
-	"azul3d.org/engine/gfx"
+	"github.com/qmcloud/engine/gfx"
 )
 
 // Device is a WebGL graphics device.

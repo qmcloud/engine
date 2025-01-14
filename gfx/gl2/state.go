@@ -5,10 +5,10 @@
 package gl2
 
 import (
-	"azul3d.org/engine/gfx"
-	"azul3d.org/engine/gfx/internal/gl/2.0/gl"
-	"azul3d.org/engine/gfx/internal/glc"
-	"azul3d.org/engine/gfx/internal/tag"
+	"github.com/qmcloud/engine/gfx"
+	"github.com/qmcloud/engine/gfx/internal/gl/2.0/gl"
+	"github.com/qmcloud/engine/gfx/internal/glc"
+	"github.com/qmcloud/engine/gfx/internal/tag"
 )
 
 // Set this to true to disable state guarding (i.e. avoiding useless OpenGL

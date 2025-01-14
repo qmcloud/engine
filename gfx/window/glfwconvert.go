@@ -1,13 +1,14 @@
 // Copyright 2014 The Azul3D Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
+//go:build 386 || amd64
 // +build 386 amd64
 
 package window
 
 import (
-	"azul3d.org/engine/keyboard"
-	"azul3d.org/engine/mouse"
+	"github.com/qmcloud/engine/keyboard"
+	"github.com/qmcloud/engine/mouse"
 
 	"github.com/go-gl/glfw/v3.1/glfw"
 )

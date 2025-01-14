@@ -9,8 +9,8 @@ import (
 	"sort"
 	"testing"
 
-	"azul3d.org/engine/gfx"
-	"azul3d.org/engine/lmath"
+	"github.com/qmcloud/engine/gfx"
+	"github.com/qmcloud/engine/lmath"
 )
 
 func TestSortByDist(t *testing.T) {

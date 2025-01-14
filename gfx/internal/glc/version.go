@@ -4,7 +4,7 @@
 
 package glc
 
-import "azul3d.org/engine/gfx/internal/glutil"
+import "github.com/qmcloud/engine/gfx/internal/glutil"
 
 func (c *Context) Version() (major, minor, release int, vendor string) {
 	s := c.gl.GetParameterString(c.VERSION)

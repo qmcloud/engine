@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"strings"
 
-	"azul3d.org/engine/gfx"
+	"github.com/qmcloud/engine/gfx"
 )
 
 // PreLoadShader implements the precusor to gfx.Canvas.LoadShader; it returns a

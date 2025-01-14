@@ -8,14 +8,14 @@ import (
 	"image"
 	"os"
 
-	"azul3d.org/engine/gfx"
+	"github.com/qmcloud/engine/gfx"
 )
 
 // OpenTexture opens the named image file, decodes it, and returns a texture
 // with that image as it's source. As usual, you will also need to import a
 // image decoder, e.g. for png:
 //
-//  import _ "image/png"
+//	import _ "image/png"
 //
 // The returned texture will have a MinFilter == LinearMipmapLinear (trilinear
 // filtering) a MagFilter == Linear, and Format == DXT1.

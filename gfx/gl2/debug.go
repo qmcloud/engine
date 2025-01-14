@@ -9,8 +9,8 @@ import (
 	"strings"
 	"unsafe"
 
-	"azul3d.org/engine/gfx/internal/gl/2.0/gl"
-	"azul3d.org/engine/gfx/internal/glutil"
+	"github.com/qmcloud/engine/gfx/internal/gl/2.0/gl"
+	"github.com/qmcloud/engine/gfx/internal/glutil"
 )
 
 func debugType(t uint32) string {

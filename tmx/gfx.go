@@ -19,8 +19,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"azul3d.org/engine/gfx"
-	"azul3d.org/engine/lmath"
+	"github.com/qmcloud/engine/gfx"
+	"github.com/qmcloud/engine/lmath"
 )
 
 var (

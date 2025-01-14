@@ -4,7 +4,7 @@ import (
 	"image"
 	"math"
 
-	"azul3d.org/engine/gfx/internal/resize"
+	"github.com/qmcloud/engine/gfx/internal/resize"
 )
 
 func nearestPOT(k int) int {

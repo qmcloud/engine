@@ -7,9 +7,9 @@ package glc
 import (
 	"image"
 
-	"azul3d.org/engine/gfx"
-	"azul3d.org/engine/gfx/internal/glutil"
-	"azul3d.org/engine/gfx/internal/tag"
+	"github.com/qmcloud/engine/gfx"
+	"github.com/qmcloud/engine/gfx/internal/glutil"
+	"github.com/qmcloud/engine/gfx/internal/tag"
 )
 
 // Background

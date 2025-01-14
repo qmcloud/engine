@@ -8,17 +8,16 @@ import (
 	"image"
 	"sync"
 
-	"azul3d.org/engine/gfx"
+	"github.com/qmcloud/engine/gfx"
 )
 
 // BaseCanvas implements basic portions of a gfx.Canvas. Specifically the
 // methods it implements are:
 //
-//  SetMSAA
-//  MSAA
-//  Precision
-//  Bounds
-//
+//	SetMSAA
+//	MSAA
+//	Precision
+//	Bounds
 type BaseCanvas struct {
 	sync.RWMutex
 	VMSAA      bool            // The MSAA state.

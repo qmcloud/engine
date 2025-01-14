@@ -1,15 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"math"
-	"os"
-
-	"github.com/ianremmler/ode"
-	"gopkg.in/qml.v1"
-	"gopkg.in/qml.v1/work-in-progress/gl"
-)
-
 const (
 	numSpheres   = 10
 	sideLen      = 0.2
@@ -17,6 +7,7 @@ const (
 	sphereRadius = 0.1732
 )
 
+/*
 var (
 	world  ode.World
 	space  ode.Space
@@ -27,6 +18,7 @@ var (
 	mass   *ode.Mass
 	angle  float64
 )
+
 
 func cb(data interface{}, obj1, obj2 ode.Geom) {
 	contact := ode.NewContact()
@@ -167,3 +159,4 @@ func main() {
 		os.Exit(1)
 	}
 }
+*/

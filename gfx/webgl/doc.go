@@ -8,7 +8,7 @@
 // the following documentation only makes note of strictly WebGL related
 // caveats (like initialization, etc).
 //
-// Feedback Loops
+// # Feedback Loops
 //
 // When performing render-to-texture (RTT), feedback loops are explicitly
 // prohibited.
@@ -20,7 +20,7 @@
 // destination will panic. Such recursive drawing is prohibited by WebGL, and
 // as such is now allowed.
 //
-// Mipmapping
+// # Mipmapping
 //
 // The gfx package allows turning on and off mipmapping of a loaded texture
 // dynamically by setting it's minification filter to a mipmapped or
@@ -35,7 +35,7 @@
 // would require a full texture reload (and having it on by default would use
 // more memory due to mipmaps always being generated).
 //
-// Uniforms
+// # Uniforms
 //
 // A gfx.Shader will have all of it's inputs (from the Shader.Inputs map)
 // mapped by name to uniforms within the fragment and vertex shader programs.
@@ -45,18 +45,18 @@
 //
 // The default uniforms are:
 //
-//  uniform mat4 Model;       -> Model matrix from gfx.Object.Transform
-//  uniform mat4 View;        -> View matrix from gfx.Camera.Transform
-//  uniform mat4 Projection;  -> Projection matrix from gfx.Camera.Projection
-//  uniform mat4 MVP;         -> Premultiplied Model/View/Projection matrix.
-//  uniform bool BinaryAlpha; -> See below.
+//	uniform mat4 Model;       -> Model matrix from gfx.Object.Transform
+//	uniform mat4 View;        -> View matrix from gfx.Camera.Transform
+//	uniform mat4 Projection;  -> Projection matrix from gfx.Camera.Projection
+//	uniform mat4 MVP;         -> Premultiplied Model/View/Projection matrix.
+//	uniform bool BinaryAlpha; -> See below.
 //
 // BinaryAlpha is a boolean uniform value that informs the shader of the chosen
 // alpha transparency mode of an object. It is set to true if the gfx.Object
 // being drawn has a gfx.State.AlphaMode of gfx.BinaryAlpha or if the alpha
 // mode is gfx.AlphaToCoverage but the GPU does not support it.
 //
-// Vertex Attributes
+// # Vertex Attributes
 //
 // A mesh will have all of it's attributes (from the Mesh.Attribs map) mapped
 // by name to attributes within the GLSL fragment and vertex shader programs.
@@ -66,30 +66,30 @@
 //
 // The default vertex attributes are:
 //
-//  attribute vec3 Vertex;      -> from gfx.Mesh.Vertices and gfx.Mesh.Indices
-//  attribute vec4 Color;       -> from gfx.Mesh.Colors
-//  attribute vec3 Bary;        -> from gfx.Mesh.Bary
-//  attribute vec2 TexCoord[N]; -> [N] is the nth index of gfx.Mesh.TexCoords
+//	attribute vec3 Vertex;      -> from gfx.Mesh.Vertices and gfx.Mesh.Indices
+//	attribute vec4 Color;       -> from gfx.Mesh.Colors
+//	attribute vec3 Bary;        -> from gfx.Mesh.Bary
+//	attribute vec2 TexCoord[N]; -> [N] is the nth index of gfx.Mesh.TexCoords
 //
-// Uniform And Attribute Types
+// # Uniform And Attribute Types
 //
 // In both the case of uniforms as well as attributes, data types from the gfx
 // package are mapped directly to their GLSL equivilent:
 //
-//  gfx.Vec4     -> vec4
-//  gfx.Vec3     -> vec3
-//  gfx.Color    -> vec4 (GLSL does not have a dedicated color type)
-//  gfx.TexCoord -> vec2 (GLSL does not have a dedicated texture coordinate type)
+//	gfx.Vec4     -> vec4
+//	gfx.Vec3     -> vec3
+//	gfx.Color    -> vec4 (GLSL does not have a dedicated color type)
+//	gfx.TexCoord -> vec2 (GLSL does not have a dedicated texture coordinate type)
 //
 // Slices are mapped directly to GLSL arrays, which can be fixed or dynamically
 // sized, standard GLSL restrictions apply (such as a lack of dynamic indexing
 // on dynamically sized arrays, etc).
 //
-// Basic Usage
+// # Basic Usage
 //
 // TODO(slimsag): document basic usage.
 //
-// Debugging
+// # Debugging
 //
 // User applications (i.e. not this device itself) can be debugged using the
 // SetDebugOutput method of the Device interface exposed by this package. This
@@ -103,11 +103,10 @@
 //
 // TODO(slimsag): Does WebGL have a concept of "debug device"?
 //
-// Examples
+// # Examples
 //
 // The examples repository contains several examples which utilize the gfx core
 // packages. Please see:
 //
 // https://azul3d.org/examples
-//
-package webgl // import "azul3d.org/engine/gfx/webgl"
+package webgl // import "github.com/qmcloud/engine/gfx/webgl"
