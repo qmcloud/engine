@@ -13,4 +13,4 @@ If you're a Go developer interested in gamedev, I really think that you will fee
 
 It's now time for me to put some serious commitment behind something I'm passionate about, game development. I'm doing that in Zig, you can find out more here:
 
-https://devlog.hexops.com/2021/mach-engine-the-future-of-graphics-with-zig
+https://devlog.hexops.com/2021/mach-engine-the-future-of-graphics-with-zig  
